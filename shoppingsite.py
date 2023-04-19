@@ -65,6 +65,8 @@ def add_to_cart(melon_id):
     page and display a confirmation message: 'Melon successfully added to
     cart'."""
 
+    melon = melons.get_by_id(melon_id)
+    
     # TODO: Finish shopping cart functionality
 
     # The logic here should be something like:
@@ -74,9 +76,11 @@ def add_to_cart(melon_id):
     # - check if the desired melon id is the cart, and if not, put it in
     # - increment the count for that melon id by 1
     # - flash a success message
+
+
     # - redirect the user to the cart page
 
-    return "Oops! This needs to be implemented!"
+    return redirect("/cart")
 
 
 @app.route("/cart")
